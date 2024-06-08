@@ -6,6 +6,7 @@ use App\Models\Activity;
 use App\Models\Game;
 use App\Models\Genre;
 use App\Models\Team;
+use App\Models\Transaction;
 use App\Models\User;
 use App\Utilities\Numbers;
 use Carbon\Carbon;
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Transaction::factory(100)->create();
 
         User::factory()->create([
             'name' => 'Admin',
