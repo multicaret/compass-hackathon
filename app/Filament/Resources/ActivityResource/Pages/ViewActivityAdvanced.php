@@ -9,6 +9,7 @@ use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Pages\ViewRecord;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Support\HtmlString;
 
 class ViewActivityAdvanced extends ViewRecord
 {
@@ -76,7 +77,8 @@ class ViewActivityAdvanced extends ViewRecord
                          ->color(fn(string $state): string => match ($state) {
                              'physical' => 'warning',
                              'online' => 'success',
-                         }),
+                         })
+                         ->formatStateUsing(fn(string $state): string => ucfirst($state)),
                 TextEntry::make('compass_points')
                          ->getStateUsing(function (Activity $record): string {
                              $url = '/images/coin.png';
@@ -84,6 +86,17 @@ class ViewActivityAdvanced extends ViewRecord
                              return "<div style='display:flex; margin-top:20px'><img src='".$url."' style='height:25px;width:25px;object-fit:cover;margin-right:5px'/>".$record->compass_points.'</div>';
                          })
                          ->html(),
+
+                TextEntry::make('is_used')
+                         ->badge()
+                         ->color(fn(string $state): string => $state ? 'danger' : 'success')
+                         ->formatStateUsing(fn(string $state
+                         ): HtmlString => new HtmlString($state ? 'Used' : 'Not used yet'))
+                         ->columnSpanFull(),
+                TextEntry::make('start_date')
+                ,
+                TextEntry::make('end_date')
+                ,
 
             ]);
     }
