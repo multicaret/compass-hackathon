@@ -23,7 +23,6 @@ composer.lock
 package-lock.json
 /public/css/
 /public/js/
-/public/images/*
 /public/vendor/horizon/
 .phpstorm.meta.php
 _ide_helper.php
