@@ -42,7 +42,7 @@ class ViewActivityAdvanced extends ViewRecord
                                           ->send();
                           })
                           ->hidden(function ($record): bool {
-                              return $record->type == 'physical';
+                              return $record->type == 'online';
                           }),
             Actions\Action::make('twitch_stream')
                           ->label('Twitch Stream')
@@ -50,7 +50,7 @@ class ViewActivityAdvanced extends ViewRecord
                               return redirect('https://www.twitch.tv/search?term=CSGO');
                           })
                           ->hidden(function ($record): bool {
-                              return $record->type == 'online';
+                              return $record->type == 'physical';
                           }),
         ];
     }
