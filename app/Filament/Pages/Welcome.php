@@ -5,11 +5,13 @@ namespace App\Filament\Pages;
 use App\Models\Game;
 use App\Models\Genre;
 use App\Models\Team;
+use Filament\Actions\Action;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\HtmlString;
@@ -176,5 +178,24 @@ class Welcome extends Page
                       ]),
             ])
             ->statePath('data');
+    }
+
+
+    public function save(): void
+    {
+        Notification::make()
+                    ->success()
+                    ->title(__('filament-panels::resources/pages/edit-record.notifications.saved.title'))
+                    ->send();
+        $this->redirectRoute('filament.admin.resources.activities.index');
+    }
+
+    protected function getFormActions(): array
+    {
+        return [
+            Action::make('save')
+                  ->label(__('filament-panels::resources/pages/edit-record.form.actions.save.label'))
+                  ->submit('save'),
+        ];
     }
 }
