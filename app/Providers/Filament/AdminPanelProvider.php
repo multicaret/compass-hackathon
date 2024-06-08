@@ -6,7 +6,6 @@ use App\Filament\Pages\Welcome;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
@@ -31,10 +30,9 @@ class AdminPanelProvider extends PanelProvider
             ->profile()
             ->emailVerification()
             ->brandLogoHeight('2.5rem')
-            ->favicon(asset('images/favicon.svg'))
-            ->brandLogo(asset('images/logo.png'))
-            /*TODO: change dark logo*/
-            ->darkModeBrandLogo(asset('images/logo-dark.png'))
+            ->favicon(asset('logo.svg'))
+            ->brandLogo(asset('logo.svg'))
+            ->darkModeBrandLogo(asset('logo.svg'))
             ->colors([
                 'primary' => Color::Pink,
                 'gray' => Color::Slate,
