@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Game;
 use App\Models\Genre;
+use App\Models\Team;
 use App\Models\User;
+use App\Utilities\Numbers;
 use Illuminate\Database\Seeder;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -21,6 +24,37 @@ class DatabaseSeeder extends Seeder
         foreach ($genres as $genre) {
             Genre::create([
                 'title' => $genre,
+            ]);
+        }
+
+
+        $teams = [
+            'MOUZ',
+            'FaZe Clan',
+            'G2 Esports',
+            'Team Spirit',
+            'The Mongolz'
+        ];
+        foreach ($teams as $title) {
+            Team::create([
+                'title' => $title,
+                'tournaments_won' => mt_rand(0, 100),
+                'tournaments_lost' => mt_rand(0, 100),
+            ]);
+        }
+
+        $games = [
+            'Fortnite',
+            'Apex LEGENDS',
+            'Overwatch',
+            'Call of Duty',
+            'CSGO',
+        ];
+        foreach ($games as $game) {
+            Game::create([
+                'title' => $game,
+                'monthly_players' => Numbers::toReadable(mt_rand(0, 100000)),
+                'yearly_players' => Numbers::toReadable(mt_rand(100000, 100000000)),
             ]);
         }
 
