@@ -7,6 +7,7 @@ use App\Models\Activity;
 use Filament\Actions;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
+use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ViewRecord;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\HtmlString;
@@ -35,10 +36,10 @@ class ViewActivityAdvanced extends ViewRecord
             Actions\Action::make('qr_code')
                           ->label('Scan QR code')
                           ->action(function ($record): void {
-                              /*Notification::make()
+                              Notification::make()
                                           ->success()
-                                          ->title('Work in progress, Sorry not enough time!')
-                                          ->send();*/
+                                          ->title('Successfully Added 10 points to your Wallet!')
+                                          ->send();
                           })
                           ->hidden(function ($record): bool {
                               return $record->type == 'physical';
