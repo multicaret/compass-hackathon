@@ -30,8 +30,6 @@ class Welcome extends Page
 
     public function mount()
     {
-        $auth = auth()->user();
-
         $this->form->fill([
             'foo' => 'bar',
         ]);
