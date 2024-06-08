@@ -112,6 +112,7 @@ class ActivityResource extends Resource
     {
         return [
             'index' => Pages\ManageActivities::route('/'),
+            'view' => Pages\ViewActivityAdvanced::route('/{record}/advanced'),
         ];
     }
 }
