@@ -1,0 +1,114 @@
+{
+    "data": [
+        {
+            "title": "VR Gaming Challenge",
+            "description": "Experience the thrill of virtual reality gaming with the latest VR technology.",
+            "location": "Abu Dhabi - Space 42",
+            "start_date": "2024-06-07T10:00:00",
+            "end_date": "2024-06-07T12:00:00",
+            "compass_points_image_path": "img1.jpg",
+            "type": "Physical",
+            "compass_points": 50,
+            "is_used": false
+        },
+        {
+            "title": "AR Treasure Hunt",
+            "description": "Join the augmented reality treasure hunt and find hidden treasures around Space 42.",
+            "location": "Abu Dhabi - Space 42",
+            "start_date": "2024-06-07T14:00:00",
+            "end_date": "2024-06-07T16:00:00",
+            "compass_points_image_path": "img2.jpg",
+            "type": "Physical",
+            "compass_points": 60,
+            "is_used": false
+        },
+        {
+            "title": "Esports Tournament",
+            "description": "Compete in the ultimate esports tournament featuring popular games.",
+            "location": "Abu Dhabi - Space 42",
+            "start_date": "2024-06-08T10:00:00",
+            "end_date": "2024-06-08T13:00:00",
+            "compass_points_image_path": "img3.jpg",
+            "type": "Physical",
+            "compass_points": 80,
+            "is_used": false
+        },
+        {
+            "title": "Retro Gaming Corner",
+            "description": "Relive the nostalgia of classic games at our retro gaming corner.",
+            "location": "Abu Dhabi - Space 42",
+            "start_date": "2024-06-08T14:00:00",
+            "end_date": "2024-06-08T16:00:00",
+            "compass_points_image_path": "img4.jpg",
+            "type": "Physical",
+            "compass_points": 40,
+            "is_used": false
+        },
+        {
+            "title": "Gaming Cosplay Contest",
+            "description": "Show off your best gaming cosplay and win exciting prizes.",
+            "location": "Abu Dhabi - Space 42",
+            "start_date": "2024-06-08T17:00:00",
+            "end_date": "2024-06-08T19:00:00",
+            "compass_points_image_path": "img5.jpg",
+            "type": "Physical",
+            "compass_points": 70,
+            "is_used": false
+        },
+        {
+            "title": "Online Gaming Quiz",
+            "description": "Test your gaming knowledge with our online gaming quiz.",
+            "platform": "Online",
+            "start_date": "2024-06-07T12:00:00",
+            "end_date": "2024-06-07T13:00:00",
+            "compass_points_image_path": "img6.jpg",
+            "type": "Online",
+            "compass_points": 30,
+            "is_used": false
+        },
+        {
+            "title": "Twitch Stream Event",
+            "description": "Join our live Twitch stream event featuring popular streamers.",
+            "platform": "Twitch",
+            "start_date": "2024-06-07T15:00:00",
+            "end_date": "2024-06-07T18:00:00",
+            "compass_points_image_path": "img7.jpg",
+            "type": "Online",
+            "compass_points": 50,
+            "is_used": false
+        },
+        {
+            "title": "Online Game Development Workshop",
+            "description": "Participate in an online workshop to learn game development basics.",
+            "platform": "Online",
+            "start_date": "2024-06-08T10:00:00",
+            "end_date": "2024-06-08T12:00:00",
+            "compass_points_image_path": "img8.jpg",
+            "type": "Online",
+            "compass_points": 60,
+            "is_used": false
+        },
+        {
+            "title": "Social Media Challenge",
+            "description": "Engage with our social media challenge and win points by sharing and re-sharing posts.",
+            "platform": "Social Media",
+            "start_date": "2024-06-08T14:00:00",
+            "end_date": "2024-06-08T15:00:00",
+            "compass_points_image_path": "img9.jpg",
+            "type": "Online",
+            "compass_points": 40,
+            "is_used": false
+        },
+        {
+            "title": "Online Multiplayer Game Night",
+            "description": "Join our online multiplayer game night and play with fellow gamers.",
+            "platform": "Online",
+            "start_date": "2024-06-08T20:00:00",
+            "end_date": "2024-06-08T23:00:00",
+            "compass_points_image_path": "img10.jpg",
+            "type": "Online",
+            "compass_points": 70,
+            "is_used": false
+        }
+    ]
+}
